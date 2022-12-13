@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func BubleShort(input []int) {
+func BubleSort(input []int) {
 	for i := 0; i < len(input); i++ {
 		for j := len(input) - 1; j > i; j-- {
 			if input[j] < input[j-1] {
@@ -11,13 +11,14 @@ func BubleShort(input []int) {
 				input[j-1] = temp
 			}
 		}
+		fmt.Println("input = ", input)
 	}
 }
 
 func main() {
 	a := []int{20, 3, 213, 2, 1, 3, 5, 342, 2, 1}
 	fmt.Println(a)
-	BubleShort(a)
+	BubleSort(a)
 	fmt.Println(a)
 }
 
